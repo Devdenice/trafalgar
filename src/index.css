@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #1f1534;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p {
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  letter-spacing: 0.025em;
+  line-height: 1.625;
+}
+
+.custom-text {
+  color: rgba(
+    255,
+    255,
+    255,
+    0.5
+  ); /* Adjust the last value (alpha) to set transparency */
+}
+
+@layer components {
+  .logo {
+    @apply w-8 h-8 flex items-center rounded-full bg-[#458FF6] justify-center text-white font-semibold;
+  }
+
+  .logo-footer {
+    @apply w-8 h-8 flex items-center rounded-full bg-white justify-center text-white font-semibold;
+  }
+
+  .button {
+    @apply text-xs px-3 py-2 sm:text-sm sm:px-4 sm:py-2;
+  }
+}
+
+@layer utilities {
+  a {
+    @apply text-base text-[#1F1534];
+  }
+
+  /* Navigation */
+
+  .nav-text {
+    @apply text-xs sm:text-sm md:text-base lg:text-base xl:text-lg tracking-wider;
+  }
+
+  /* Hero */
+  .hero-header {
+    @apply font-bold tracking-wide max-xxs:text-center max-xxs:text-lg text-xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-5xl lg:pr-48;
+  }
+
+  .hero-subheader {
+    @apply text-center tracking-wide leading-relaxed text-xs sm:text-sm md:text-sm lg:text-base xl:text-xl opacity-50 max-xxs:w-[85%] xxs:w-[70%] xs:w-[50%] md:text-left md:w-[90%] lg:w-[88%];
+  }
+
+  .header {
+    @apply text-lg max-xxs:text-center sm:text-xl md:text-2xl font-bold tracking-wider;
+  }
+
+  .sub-header {
+    @apply text-xs sm:text-sm md:text-base opacity-70 tracking-wider leading-relaxed;
+  }
+
+  .services-header {
+    @apply font-bold text-sm md:text-base;
+  }
+
+  .services-subheader {
+    @apply text-xs md:text-sm opacity-70;
+  }
+
+  .feedback-header {
+    @apply text-3xl text-white text-center max-xxs:text-lg xxs:text-xl sm:text-2xl lg:text-3xl font-bold tracking-wider;
+  }
+
+  .footer-header {
+    @apply text-white font-bold mb-4;
+  }
+
+  .footer-subheader {
+    @apply text-white opacity-60;
+  }
+}
